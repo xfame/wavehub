@@ -1,4 +1,3 @@
-print("By xfame")
 
 local ScreenGui = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
@@ -16,7 +15,9 @@ local FeUi = Instance.new("TextButton")
 local FakeIp = Instance.new("TextButton")
 local MainButton = Instance.new("TextButton")
 local ImageLabel = Instance.new("ImageLabel")
-
+local Loading = Instance.new("Frame")
+local LoadingS = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -181,9 +182,41 @@ ImageLabel.Position = UDim2.new(0, 0, 0.014196177, 0)
 ImageLabel.Size = UDim2.new(0, 87, 0, 60)
 ImageLabel.Image = "rbxassetid://6254579941"
 
--- Scripts:
+Loading.Name = "Loading"
+Loading.Parent = ScreenGui
+Loading.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Loading.BorderColor3 = Color3.fromRGB(0, 170, 0)
+Loading.BorderSizePixel = 3
+Loading.Position = UDim2.new(0.333771646, 0, 0.280590802, 0)
+Loading.Size = UDim2.new(0, 658, 0, 367)
 
-local function JYIUMD_fake_script() -- GIF.LocalScript 
+LoadingS.Name = "LoadingS"
+LoadingS.Parent = Loading
+LoadingS.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+LoadingS.BorderColor3 = Color3.fromRGB(0, 170, 0)
+LoadingS.BorderSizePixel = 5
+LoadingS.Position = UDim2.new(0.178642452, 0, 0.400476813, 0)
+LoadingS.Size = UDim2.new(0, 439, 0, 92)
+LoadingS.Font = Enum.Font.TitilliumWeb
+LoadingS.Text = "Loading Scripts..."
+LoadingS.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadingS.TextSize = 50.000
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextLabel.Position = UDim2.new(0.33429274, 0, 0.281481475, 0)
+TextLabel.Size = UDim2.new(0, 658, 0, 72)
+TextLabel.Font = Enum.Font.TitilliumWeb
+TextLabel.Text = "wave hub"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 60.000
+
+-- Scripts:
+Main.Visible = false
+MainButton.Visible = false
+Loading.Visible = true
+
+local function KIESR_fake_script() -- GIF.LocalScript 
 	local script = Instance.new('LocalScript', GIF)
 
 	while true do
@@ -199,11 +232,56 @@ local function JYIUMD_fake_script() -- GIF.LocalScript
 		wait(0.1)
 		end
 end
-coroutine.wrap(JYIUMD_fake_script)()
+coroutine.wrap(KIESR_fake_script)()
+local function CZSDFB_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
 
-Main.Visible = false
-MainButton.Visible = true
+	wait(2)
+	script.Parent.Visible = false
+	
+end
+coroutine.wrap(CZSDFB_fake_script)()
+local function KUMRS_fake_script() -- MainButton.LocalScript 
+	local script = Instance.new('LocalScript', MainButton)
 
+	wait(2)
+	script.Parent.Visible = true
+	
+end
+coroutine.wrap(KUMRS_fake_script)()
+local function CPUUUUM_fake_script() -- LoadingS.LocalScript 
+	local script = Instance.new('LocalScript', LoadingS)
+
+	while true do
+		script.Parent.Text="Loading"
+		wait(0.5)
+		script.Parent.Text="Loading."
+		wait(0.5)
+		script.Parent.Text="Loading.."
+		wait(0.5)
+		script.Parent.Text="Loading..."
+		wait(0.5)
+	end
+end
+coroutine.wrap(CPUUUUM_fake_script)()
+local function GBPVP_fake_script() -- Loading.LocalScript 
+	local script = Instance.new('LocalScript', Loading)
+
+	wait(2)
+	script.Parent.Visible = false
+	
+end
+coroutine.wrap(GBPVP_fake_script)()
+
+local function WegMitDir() -- LoadingS.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	while true do
+		wait(2)
+		script.Parent.Visible=false
+	end
+end
+coroutine.wrap(WegMitDir)()
 MainButton.MouseButton1Down:connect(function()
 	Main.Visible = true
 end)
@@ -1217,4 +1295,6 @@ SuperFling.MouseButton1Down:connect(function()
 
 	end)
 end)
+
+
 
